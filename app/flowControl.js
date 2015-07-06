@@ -10,6 +10,20 @@ exports.flowControlAnswers = {
     //
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
+    function fizzbuzzer(number){
+      if ( num % 5 === 0 && num % 3 === 0 ) {
+        return 'fizzbuzz';
+      } else if ( num % 5 === 0 ) {
+        return 'fizz';
+      } else if ( num % 3 === 0 ) {
+        return 'buzz';
+      } else if ( typeof(num) == 'number') {
+        return false;
+      } else {
+        return num;
+      }
+    }
 
+    return fizzbuzzer(num);
   }
 };
