@@ -36,12 +36,21 @@ exports.functionsAnswers = {
     }
   },
 
-  useArguments : function() {
-
+  useArguments : function(a, b, c, d) {
+    if( a && b && c && d ){
+      return a + b + c + d;
+    } else if ( a && b && c ) {
+      return a + b + c;
+    } else if ( a && b ) {
+      return a + b;
+    } else {
+      return a;
+    }
   },
 
   callIt : function(fn) {
-
+    const args = Array.prototype.slice.call(arguments, 1, arguments.length)
+    fn.apply(null, args);
   },
 
   partialUsingArguments : function(fn) {
